@@ -1,0 +1,68 @@
+
+/* appling a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+main {
+  margin-top: 160px;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: maroon;
+  margin: 0px auto;
+  padding: 10px, 30px, 10px;
+  /*Opacity start*/
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=80);
+  -moz-opacity: 0.80;
+  -khtml-opacity: 0.8;
+  opacity: 0.8;
+  /*Opacity end*/
+}
+
+/*make nav lists inline with eachother*/
+header nav li {
+  display: inline;
+}
+
+header nav ul {
+  text-align: right;
+}
+
+header nav a {
+  /*text-decoration: none;*/
+  padding: 2em;
+  color: white;
+}
+
+footer {
+  background-color: grey;
+}
+
+header nav h2 {
+  position: absolute;
+  padding: 20px;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+/*
+
+footer p {
+  padding: 20px;
+}
+
+header h2 nav li {
+  display: inline;
+}
+*/
