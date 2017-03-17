@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Bhaina');
 
 /* appling a natural box layout model to all elements, but allowing components to change */
 html {
@@ -7,8 +8,8 @@ html {
   box-sizing: inherit;
 }
 
-main {
-  margin-top: 160px;
+a {
+  display: inline-block;
 }
 
 header {
@@ -18,7 +19,7 @@ header {
   left: 0px;
   background-color: maroon;
   margin: 0px auto;
-  padding: 10px, 30px, 10px;
+  /*padding: 10px, 30px, 10px;*/
   /*Opacity start*/
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
   filter: alpha(opacity=80);
@@ -26,6 +27,12 @@ header {
   -khtml-opacity: 0.8;
   opacity: 0.8;
   /*Opacity end*/
+  vertical-align: bottom;
+}
+
+/*whole header list aligns to the right*/
+header nav ul {
+  text-align: right;
 }
 
 /*make nav lists inline with eachother*/
@@ -33,36 +40,136 @@ header nav li {
   display: inline;
 }
 
-header nav ul {
-  text-align: right;
-}
-
+/*header links have padding between them and font color is white*/
 header nav a {
-  /*text-decoration: none;*/
   padding: 2em;
   color: white;
 }
 
-footer {
-  background-color: grey;
+/*header links will have black font and white background when touched with mouse*/
+header nav a:hover {
+  color: black;
+  background-color: white;
 }
 
-header nav h2 {
-  position: absolute;
-  padding: 20px;
-}
-
-nav a {
+/*no underline for links in header or footer*/
+a {
   text-decoration: none;
 }
 
-/*
-
-footer p {
-  padding: 20px;
-}
-
-header h2 nav li {
+header h2 a {
+  font-size: 1.5em;
+  text-decoration: none;
+  color: white;
   display: inline;
+  position: absolute;
+  padding: 2em;
 }
-*/
+
+/*h2 in header will have black font and white background when touched with mouse*/
+header h2 a:hover {
+  color: black;
+  background-color: white;
+}
+
+section h1 {
+  text-align: center;
+  font-size: 4em;
+  padding: 20%;
+  margin-top: 2em;
+  border-bottom: solid;
+}
+
+h1, h2 {
+  font-family: 'Baloo Bhaina';
+}
+
+section:first-of-type {
+  background-image: url(../assets/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#all-articles {
+  margin: 0% 10% 0%;
+  border: 0% 2%;
+  border-bottom: solid;
+}
+
+article {
+  height: 300px;
+  width: 270px;
+  text-align: center;
+  /*margin: auto;*/
+  display: inline-block;
+  max-width: 25%;
+  border: solid;
+  padding: .5em;
+  border-radius: 10%;
+
+}
+
+#all-articles h2 {
+  text-align: center;
+  font-size: 3em;
+}
+
+article h3 {
+  border-bottom: solid;
+}
+
+article p a {
+  /*text-transform: capitalize;*/
+  border: solid;
+  border-radius: 2em;
+  padding: .5em 1.4em;
+}
+
+#join h2 {
+  clear: both;
+  text-align: center;
+  font-size: 3em;
+  max-width: 40%;
+  padding-left: 1em;
+}
+
+#join h2, #join p {
+  float: none;
+  max-width: 40%;
+  padding-left: 4em;
+  text-align: center;
+
+}
+
+#join img {
+  width: 100%;
+  height: auto;
+  max-width: 35%;
+  float: right;
+}
+
+#everybody {
+  clear: both;
+}
+
+#disclaimer {
+  max-width: 40%;
+  font-size: 0.5em;
+  clear: right;
+}
+
+footer h4 {
+  font-size: .1em;
+}
+
+footer nav ul {
+  float: right;
+  bottom: 0;
+}
+
+footer {
+  background-color: grey;
+  width: 100%;
+  bottom: 0px;
+}
